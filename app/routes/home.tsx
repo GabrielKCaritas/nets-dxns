@@ -1,13 +1,16 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import { Transaction } from "../nets/transaction";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "NETS Donations" },
+    {
+      name: "description",
+      content: "Testing app for NETS Donations for Caritas Singapore",
+    },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return <Transaction />;
 }

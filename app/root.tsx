@@ -9,6 +9,7 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import { initializeApp } from "firebase/app";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -42,6 +43,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
+  const firebaseConfig = {
+    apiKey: "AIzaSyDittzZaIt8THks29kgUQ2iFGAtf-j7Yfg",
+    authDomain: "delta-surf-468410-j6.firebaseapp.com",
+    projectId: "delta-surf-468410-j6",
+    storageBucket: "delta-surf-468410-j6.firebasestorage.app",
+    messagingSenderId: "4602626974",
+    appId: "1:4602626974:web:33386798b2fed61d674c8f",
+    measurementId: "G-SXQVK0LM7L",
+  };
+  initializeApp(firebaseConfig);
+
   return <Outlet />;
 }
 
